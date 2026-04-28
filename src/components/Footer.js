@@ -6,7 +6,7 @@ const services = ["Landing pages", "Portfolio sites", "Student projects"];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[rgba(139,109,72,0.22)] bg-[#ede8df]">
+    <footer className="border-t border-[rgba(139,109,72,0.22)] bg-[#d3cbbd]">
       <div className="mx-auto w-full max-w-4xl px-6 py-12">
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <div>
