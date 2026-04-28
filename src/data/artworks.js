@@ -246,7 +246,7 @@ const exhibitionConcept = {
 
 const curatorNote = {
   title: "Curator's Note",
-  body: "This collection reminded me that Filipino nature art is not simply about scenery. It is about how people live with the land, how stories are rooted in place, and how artists preserve cultural memory through scenes of work, wonder, and inheritance. I hope viewers leave with a deeper respect for both art and the environment that inspires it.",
+  body: "This collection reminded us that Filipino nature art is not simply about scenery. It is about how people live with the land, how stories are rooted in place, and how artists preserve cultural memory through scenes of work, wonder, and inheritance. We hope viewers leave with a deeper respect for both art and the environment that inspires it.",
 };
 
 export default artworks;

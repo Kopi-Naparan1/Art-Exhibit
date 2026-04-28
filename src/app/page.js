@@ -65,7 +65,7 @@ export default function Home() {
               href="/gallery"
               className="inline-flex items-center justify-center rounded-full border border-[rgba(203,160,90,0.42)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-[#d4af67]"
             >
-              View Gallery
+              Explore Gallery
             </Link>
           </div>
         </div>

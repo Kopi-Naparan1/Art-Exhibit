@@ -26,7 +26,7 @@ export default function HeroSection({ title, subtitle, ctaHref = "/gallery" }) {
               href={ctaHref}
               className="inline-flex items-center justify-center rounded-full border border-[rgba(203,160,90,0.42)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-[#d4af67]"
             >
-              Enter Gallery
+              Explore Gallery
             </Link>
             <span className="text-sm text-[var(--muted)] sm:max-w-xs">
               Museum-style presentation for school exhibit viewing
