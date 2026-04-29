@@ -29,7 +29,7 @@ export default function ArtistCard({ artist, compact = false }) {
           <p className="hidden text-base leading-relaxed text-[var(--muted)] sm:block">
             {artist.bio}
           </p>
-          <p className="text-sm leading-relaxed text-[var(--muted)] sm:hidden">
+          <p className="text-sm leading-relaxed text-[var(--muted)] hidden md:block">
             {artist.contribution}
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function ArtistCard({ artist, compact = false }) {
           <p className="text-sm font-medium text-[var(--forest)]">
             Contribution
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-[var(--muted)]">
+          <p className="mt-1 text-sm leading-relaxed text-[var(--muted)] hidden md:block">
             {artist.contribution}
           </p>
         </div>

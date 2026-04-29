@@ -117,7 +117,7 @@ export default function Home() {
             <h2 className="font-display text-3xl font-semibold tracking-tight text-[var(--forest)] md:text-5xl">
               Explore the complete student collection
             </h2>
-            <p className="max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
+            <p className="max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg hidden md:block">
               Continue from the homepage into the full gallery, where the works
               are organized for clear viewing and closer study.
             </p>

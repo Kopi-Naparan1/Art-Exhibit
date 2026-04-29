@@ -18,7 +18,7 @@ export default function SectionHeader({
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+        <p className="max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg hidden md:block">
           {description}
         </p>
       ) : null}

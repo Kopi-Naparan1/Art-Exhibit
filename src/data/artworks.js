@@ -261,7 +261,7 @@ const artists = [
 
 const exhibitionConcept = {
   title: "Nature as Identity",
-  body: "This exhibit shows how Filipino artists use forests, farms, water, mountains, and harvest scenes not as background only, but as symbols of memory, labor, myth, and belonging. Each selected work reveals how the natural world is tied to culture and daily life.",
+  body: "This exhibit reveals how Filipino artists transform forests, farms, rivers, mountains, and harvest scenes into symbols of memory, labor, myth, and belonging—showing nature as part of culture and daily life.",
 };
 
 const curatorNote = {

@@ -44,7 +44,7 @@ export default function HeroSection({
             <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-[var(--forest)] sm:text-5xl md:text-6xl xl:text-7xl">
               {title}
             </h1>
-            <p className="max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
+            <p className="hidden md:block max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
               {subtitle}
             </p>
           </div>
@@ -63,11 +63,11 @@ export default function HeroSection({
             </span>
           </div>
 
-          <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-alt)] p-4 sm:hidden">
+          <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-alt)] p-4 md:block hidden">
             <p className="inline-flex items-center rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-3 py-1 text-[11px] tracking-[0.24em] text-[var(--gold)] uppercase">
               Exhibit Focus
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+            <p className=" mt-2 text-sm leading-relaxed text-[var(--muted)]">
               The opening sequence foregrounds artworks that examine nature
               through labor, landscape, and folklore.
             </p>
