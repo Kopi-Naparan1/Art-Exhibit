@@ -14,8 +14,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Nature in Filipino Art",
-  description: "A virtual gallery exhibition on Filipino nature-themed artworks.",
+  title: "Nature in Filipino Art | Student Art Showcase",
+  description:
+    "A virtual gallery exhibition featuring the student artwork collection in a polished showcase experience.",
 };
 
 export default function RootLayout({ children }) {

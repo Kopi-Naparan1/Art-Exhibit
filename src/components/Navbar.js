@@ -26,8 +26,8 @@ export default function Navbar() {
   return (
     <header
       className={[
-        "sticky top-0 z-50 border-b border-[var(--border)] bg-[rgba(247,243,237,0.96)] transition-shadow",
-        isScrolled ? "shadow-[0_10px_24px_rgba(43,43,43,0.08)]" : "shadow-none",
+        "sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--paper-strong)] transition-shadow",
+        isScrolled ? "shadow-[0_10px_24px_var(--ink-shadow)]" : "shadow-none",
       ].join(" ")}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:px-8 md:py-4">
@@ -81,7 +81,7 @@ export default function Navbar() {
       <div
         id="primary-navigation"
         className={[
-          "border-t border-[var(--border)] bg-[rgba(247,243,237,0.98)] px-4 py-4 md:hidden sm:px-6",
+          "border-t border-[var(--border)] bg-[var(--paper-strong)] px-4 py-4 md:hidden sm:px-6",
           menuOpen ? "block" : "hidden",
         ].join(" ")}
       >

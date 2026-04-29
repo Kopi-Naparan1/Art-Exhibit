@@ -1,0 +1,267 @@
+import NaparanArt from "@/app/assets/our-arts/naparan-coffee.avif";
+import VerulaArt from "@/app/assets/our-arts/verula-mountain.avif";
+import EchavezArt1 from "@/app/assets/our-arts/echaves-mountain.avif";
+import EchavezArt2 from "@/app/assets/our-arts/echaves-trees.avif";
+import BardagoArt1 from "@/app/assets/our-arts/bardago-sunrise.avif";
+import BardagoArt2 from "@/app/assets/our-arts/bardago-tree.avif";
+import FontanosArt1 from "@/app/assets/our-arts/fontanos-blooming.avif";
+import FontanosArt2 from "@/app/assets/our-arts/fontanos-garden.avif";
+import BejecArt1 from "@/app/assets/our-arts/bejec-god.avif";
+import BejecArt2 from "@/app/assets/our-arts/bejec-music.avif";
+import MejaresArt1 from "@/app/assets/our-arts/mejares-bamboo.avif";
+import MejaresArt2 from "@/app/assets/our-arts/mejares-butterfly.avif";
+import LaureArt1 from "@/app/assets/our-arts/laure-flower.avif";
+import LaureArt2 from "@/app/assets/our-arts/laure-sunset.avif";
+import LaureArt3 from "@/app/assets/our-arts/laure-river.avif";
+import LaureArt4 from "@/app/assets/our-arts/laure-parrot.avif";
+import LaureArt5 from "@/app/assets/our-arts/laure-twilight.avif";
+import CastilArt1 from "@/app/assets/our-arts/castil-comic.avif";
+
+import NaparanProfile from "@/app/assets/student-artist-pic/naparan.jpg";
+import VerulaProfile from "@/app/assets/student-artist-pic/verula.jpg";
+import EchavezProfile from "@/app/assets/student-artist-pic/echaves.jpg";
+import BardagoProfile from "@/app/assets/student-artist-pic/bardago.jpg";
+import FontanosProfile from "@/app/assets/student-artist-pic/fontanos.jpg";
+import BejecProfile from "@/app/assets/student-artist-pic/bejec.png";
+import MejaresProfile from "@/app/assets/student-artist-pic/mejares.jpg";
+import LaureProfile from "@/app/assets/student-artist-pic/laure.jpg";
+import CastilProfile from "@/app/assets/student-artist-pic/castil.jpg";
+
+const studentArtworks = [
+  {
+    id: 1,
+    artistSlug: "naparan",
+    category: "Coffee Painting",
+    title: "Nature Coffee Painting",
+    artist: "Kopi Anan P. Naparan",
+    artistImage: NaparanProfile,
+    image: NaparanArt,
+    medium: "Coffee Painting",
+    year: "",
+    description:
+      "This coffee painting captures the beauty and calmness of nature using natural coffee tones. Through shading, texture, and soft blending, it reflects warmth, balance, and quiet elegance.",
+  },
+  {
+    id: 2,
+    artistSlug: "verula",
+    category: "Coffee Painting",
+    title: "Mt. Kitanglad",
+    artist: "Decerien G. Verula",
+    artistImage: VerulaProfile,
+    image: VerulaArt,
+    medium: "Coffee Painting",
+    year: "",
+    description:
+      "Painted using coffee as a medium, this artwork captures the beauty of Mt. Kitanglad, the artist's birthplace and first home. The sepia tones symbolize a deep connection to the land, while textured layers emphasize the mountain's earthy essence.",
+  },
+  {
+    id: 3,
+    artistSlug: "echavez",
+    category: "Pencil Drawing",
+    title: "Mountain",
+    artist: "Fidel B. Echavez Jr.",
+    artistImage: EchavezProfile,
+    image: EchavezArt1,
+    medium: "Pencil Drawing",
+    year: "",
+    description:
+      "This pencil sketch of a mountain landscape shows depth and distance using shading techniques. The foreground is darker and more detailed, while the background is lighter to create perspective and calm.",
+  },
+  {
+    id: 4,
+    artistSlug: "echavez",
+    category: "Pencil Drawing",
+    title: "Tree and Branches",
+    artist: "Fidel B. Echavez Jr.",
+    artistImage: EchavezProfile,
+    image: EchavezArt2,
+    medium: "Pencil Drawing",
+    year: "",
+    description:
+      "This drawing focuses on a tree as the main subject, using detailed lines and shading to highlight texture and form. It reflects appreciation for nature and resilience through careful contrast and structure.",
+  },
+  {
+    id: 5,
+    artistSlug: "bardago",
+    category: "Cubism",
+    title: "Sunrise",
+    artist: "John Pennie A. Bardago",
+    artistImage: BardagoProfile,
+    image: BardagoArt1,
+    medium: "Cubism",
+    year: "",
+    description:
+      "This artwork uses Cubism style with geometric shapes and bold lines. The sun and rays are divided into sections, while warm colors show light and energy against layered hills and a new beginning.",
+  },
+  {
+    id: 6,
+    artistSlug: "bardago",
+    category: "Cubism",
+    title: "Tree",
+    artist: "John Pennie A. Bardago",
+    artistImage: BardagoProfile,
+    image: BardagoArt2,
+    medium: "Cubism",
+    year: "",
+    description:
+      "This artwork uses Cubism style with geometric shapes and bold lines. The leaves and branches are divided into sections, while different green shades create depth and texture through abstraction.",
+  },
+  {
+    id: 7,
+    artistSlug: "fontanos",
+    category: "Scribbling",
+    title: "Blooming Harmony",
+    artist: "Sarah Mae Chelin A. Fontanos",
+    artistImage: FontanosProfile,
+    image: FontanosArt1,
+    medium: "Scribbling Art",
+    year: "",
+    description:
+      "This artwork reflects nature through overlapping petal-like shapes resembling a vibrant flower in bloom. Warm colors suggest sunlight, while bold black lines create balance and harmony.",
+  },
+  {
+    id: 8,
+    artistSlug: "fontanos",
+    category: "Scribbling",
+    title: "Garden of Seasons",
+    artist: "Sarah Mae Chelin A. Fontanos",
+    artistImage: FontanosProfile,
+    image: FontanosArt2,
+    medium: "Scribbling Art",
+    year: "",
+    description:
+      "This artwork captures nature through flowing organic shapes and bright colors. Greens represent growth, blues reflect water and sky, while reds, oranges, and yellows symbolize seasonal change.",
+  },
+  {
+    id: 9,
+    artistSlug: "bejec",
+    category: "Calligraphy",
+    title: "Calligraphy I",
+    artist: "Ashton S. Bejec",
+    artistImage: BejecProfile,
+    image: BejecArt1,
+    medium: "Calligraphy",
+    year: "",
+    description:
+      "This piece pairs Dante Alighieri's quote with fern imagery to symbolize sincerity and natural beauty. Two shades of green create depth, while the word God is highlighted with gold, silver, and red accents.",
+  },
+  {
+    id: 10,
+    artistSlug: "bejec",
+    category: "Calligraphy",
+    title: "Calligraphy II",
+    artist: "Ashton S. Bejec",
+    artistImage: BejecProfile,
+    image: BejecArt2,
+    medium: "Calligraphy",
+    year: "",
+    description:
+      "This piece visualizes George Santayana's quote with leaf shapes representing nature's diversity. Green shades create a lush backdrop, while the word Music is highlighted with gold, silver, and red accents.",
+  },
+  {
+    id: 11,
+    artistSlug: "mejares",
+    category: "Paper Art",
+    title: "Bamboo",
+    artist: "Princess Joy H. Mejares",
+    artistImage: MejaresProfile,
+    image: MejaresArt1,
+    medium: "Origami / Paper Art",
+    year: "",
+    description:
+      "This origami artwork shows bamboo, representing strength and flexibility in nature. Simple folding techniques form its structure, reflecting how nature remains strong and continues to grow.",
+  },
+  {
+    id: 12,
+    artistSlug: "mejares",
+    category: "Paper Art",
+    title: "Butterfly",
+    artist: "Princess Joy H. Mejares",
+    artistImage: MejaresProfile,
+    image: MejaresArt2,
+    medium: "Origami / Paper Art",
+    year: "",
+    description:
+      "This origami artwork shows a butterfly, symbolizing change, growth, and beauty in nature. Careful folding creates its wings and shape, showing how living things transform over time.",
+  },
+  {
+    id: 13,
+    artistSlug: "laure",
+    category: "Photography",
+    title: "Flower",
+    artist: "Yadi Zernis L. Laure",
+    artistImage: LaureProfile,
+    image: LaureArt1,
+    medium: "Photography",
+    year: "",
+    description:
+      "This photograph uses the rule of thirds by placing the flower on the left side of the frame. A shallow depth of field blurs the background, creating negative space and helping the flower stand out.",
+  },
+  {
+    id: 14,
+    artistSlug: "laure",
+    category: "Photography",
+    title: "Sunset Tree Landscape",
+    artist: "Yadi Zernis L. Laure",
+    artistImage: LaureProfile,
+    image: LaureArt2,
+    medium: "Photography",
+    year: "",
+    description:
+      "This photograph uses the rule of thirds by placing the tree and horizon strategically. Leading lines from the bridge and road guide the viewer's eyes toward the mountains and glowing sunset sky.",
+  },
+  {
+    id: 15,
+    artistSlug: "laure",
+    category: "Photography",
+    title: "River and Mountain",
+    artist: "Yadi Zernis L. Laure",
+    artistImage: LaureProfile,
+    image: LaureArt3,
+    medium: "Photography",
+    year: "",
+    description:
+      "This photograph uses leading lines from the flowing river to guide the eye toward the mountains. Foreground water adds texture and depth, while surrounding trees softly frame the landscape.",
+  },
+  {
+    id: 16,
+    artistSlug: "laure",
+    category: "Photography",
+    title: "Vibrant Sentinel",
+    artist: "Yadi Zernis L. Laure",
+    artistImage: LaureProfile,
+    image: LaureArt4,
+    medium: "Photography",
+    year: "",
+    description:
+      "This image uses the rule of thirds with the parrot placed slightly to the right. Contrast between the dark background and bright feathers emphasizes the subject and its strong presence.",
+  },
+  {
+    id: 17,
+    artistSlug: "laure",
+    category: "Photography",
+    title: "Twilight Silhouette",
+    artist: "Yadi Zernis L. Laure",
+    artistImage: LaureProfile,
+    image: LaureArt5,
+    medium: "Photography",
+    year: "",
+    description:
+      "This image uses a strong silhouette technique with a dark tree against a bright sunset sky. The composition uses negative space, warm colors, and leading lines to create calm and depth.",
+  },
+  {
+    id: 18,
+    artistSlug: "castil",
+    category: "Animation",
+    title: "Animation Concept Art",
+    artist: "Racel Rey T. Castil",
+    artistImage: CastilProfile,
+    image: CastilArt1,
+    medium: "Animation",
+    year: "",
+    description:
+      "This artwork imitates what a standard animation adaptation would look like from original literature. It combines sarcastic and action themes with anime-inspired visual elements.",
+  },
+];
+
+export default studentArtworks;
