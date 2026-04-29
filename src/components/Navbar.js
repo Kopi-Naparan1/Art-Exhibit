@@ -6,8 +6,22 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/artists", label: "Artists" },
+  {
+    href: "/gallery",
+    label: "Gallery",
+    children: [
+      { href: "/gallery#student-artworks", label: "Student Artworks" },
+      { href: "/gallery#professional-artworks", label: "Professional Artworks" },
+    ],
+  },
+  {
+    href: "/artists",
+    label: "Artists",
+    children: [
+      { href: "/artists#student-artists", label: "Student Artists" },
+      { href: "/artists#professional-artists", label: "Professional Artists" },
+    ],
+  },
   { href: "/about", label: "About" },
 ];
 
@@ -15,6 +29,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openMobileSection, setOpenMobileSection] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 10);
@@ -53,26 +68,66 @@ export default function Navbar() {
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => {
             const active = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className={[
-                  "relative text-sm tracking-wide transition-colors",
-                  active
-                    ? "text-[var(--forest)]"
-                    : "text-[var(--muted)] hover:text-[var(--foreground)]",
-                ].join(" ")}
-              >
-                {item.label}
-                <span
+            if (!item.children) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
                   className={[
-                    "absolute -bottom-1 left-0 h-px w-full origin-left bg-[var(--forest)] transition-transform",
-                    active ? "scale-x-100" : "scale-x-0",
+                    "relative text-sm tracking-wide transition-colors",
+                    active
+                      ? "text-[var(--forest)]"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)]",
                   ].join(" ")}
-                />
-              </Link>
+                >
+                  {item.label}
+                  <span
+                    className={[
+                      "absolute -bottom-1 left-0 h-px w-full origin-left bg-[var(--forest)] transition-transform",
+                      active ? "scale-x-100" : "scale-x-0",
+                    ].join(" ")}
+                  />
+                </Link>
+              );
+            }
+
+            return (
+              <div key={item.href} className="group relative">
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={[
+                    "relative inline-flex items-center gap-2 text-sm tracking-wide transition-colors",
+                    active
+                      ? "text-[var(--forest)]"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)]",
+                  ].join(" ")}
+                >
+                  {item.label}
+                  <span className="text-[10px] leading-none text-current">+</span>
+                  <span
+                    className={[
+                      "absolute -bottom-1 left-0 h-px w-full origin-left bg-[var(--forest)] transition-transform",
+                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+                    ].join(" ")}
+                  />
+                </Link>
+
+                <div className="pointer-events-none absolute left-0 top-full z-20 pt-4 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+                  <div className="min-w-[220px] rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] p-2 shadow-[0_16px_32px_var(--ink-shadow)]">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block rounded-2xl px-4 py-3 text-sm text-[var(--muted)] transition-colors hover:bg-[var(--hover)] hover:text-[var(--foreground)]"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             );
           })}
         </nav>
@@ -91,20 +146,78 @@ export default function Navbar() {
         >
           {navItems.map((item) => {
             const active = pathname === item.href;
+            if (!item.children) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={[
+                    "rounded-2xl border px-4 py-3 text-sm tracking-wide transition-colors",
+                    active
+                      ? "border-[var(--forest)] bg-[var(--hover)] text-[var(--forest)]"
+                      : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--hover)] hover:text-[var(--foreground)]",
+                  ].join(" ")}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            const isOpen = openMobileSection === item.href;
+
             return (
-              <Link
+              <div
                 key={item.href}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className={[
-                  "rounded-2xl border px-4 py-3 text-sm tracking-wide transition-colors",
-                  active
-                    ? "border-[var(--forest)] bg-[var(--hover)] text-[var(--forest)]"
-                    : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--hover)] hover:text-[var(--foreground)]",
-                ].join(" ")}
+                className="rounded-[24px] border border-[var(--border)] bg-[var(--paper)]"
               >
-                {item.label}
-              </Link>
+                <div className="flex items-center gap-2 p-2">
+                  <Link
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={[
+                      "flex-1 rounded-2xl px-4 py-3 text-sm tracking-wide transition-colors",
+                      active
+                        ? "bg-[var(--hover)] text-[var(--forest)]"
+                        : "text-[var(--muted)] hover:bg-[var(--hover)] hover:text-[var(--foreground)]",
+                    ].join(" ")}
+                  >
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`${item.label.toLowerCase()}-submenu`}
+                    className="rounded-2xl px-3 py-3 text-sm text-[var(--forest)] transition-colors hover:bg-[var(--hover)]"
+                    onClick={() =>
+                      setOpenMobileSection((value) =>
+                        value === item.href ? null : item.href
+                      )
+                    }
+                  >
+                    {isOpen ? "-" : "+"}
+                  </button>
+                </div>
+
+                <div
+                  id={`${item.label.toLowerCase()}-submenu`}
+                  className={isOpen ? "grid gap-1 px-2 pb-2" : "hidden"}
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setOpenMobileSection(null);
+                      }}
+                      className="rounded-2xl px-4 py-3 text-sm text-[var(--muted)] transition-colors hover:bg-[var(--hover)] hover:text-[var(--foreground)]"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             );
           })}
         </nav>

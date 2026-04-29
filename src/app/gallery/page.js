@@ -47,6 +47,19 @@ const collectionStats = [
   },
 ];
 
+const galleryJumps = [
+  {
+    href: "#student-artworks",
+    label: "Student Artworks",
+    detail: `${studentArtworks.length} works`,
+  },
+  {
+    href: "#professional-artworks",
+    label: "Professional Artworks",
+    detail: `${professionalArtworks.length} works`,
+  },
+];
+
 export default function GalleryPage() {
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-4 py-8 sm:px-6 md:px-8 md:py-16">
@@ -55,7 +68,7 @@ export default function GalleryPage() {
           <SectionHeader
             eyebrow="Student Showcase"
             title="Student artworks first, professional masterpieces below"
-            description="The gallery opens with the full student collection, then transitions into the 10 Filipino professional artworks that ground the exhibit in a wider art-historical context."
+            description="The gallery begins with the student collection, then transitions into professional reference works that extend the exhibition's historical context."
           />
 
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -85,14 +98,53 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <GalleryGrid artworks={studentArtworks} />
+      <section className="rounded-[32px] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[0_8px_24px_var(--ink-shadow)] sm:p-5 md:p-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-1">
+            <p className="text-xs tracking-[0.26em] text-[var(--gold)] uppercase">
+              Quick Navigation
+            </p>
+            <p className="text-sm leading-relaxed text-[var(--muted)]">
+              Move directly to the student or professional section.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {galleryJumps.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] px-4 py-3 transition-colors hover:bg-[var(--hover)]"
+              >
+                <p className="text-sm font-medium text-[var(--foreground)]">
+                  {item.label}
+                </p>
+                <p className="mt-1 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
+                  {item.detail}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <section className="space-y-6 pt-2 md:pt-4">
+      <section id="student-artworks" className="scroll-mt-28 space-y-6">
+        <SectionHeader
+          eyebrow="Student Artworks"
+          title="The student collection"
+          description="The works below introduce the exhibit through contemporary student responses to landscape, labor, flora, memory, and visual experimentation."
+        />
+        <GalleryGrid artworks={studentArtworks} />
+      </section>
+
+      <section
+        id="professional-artworks"
+        className="scroll-mt-28 space-y-6 pt-2 md:pt-4"
+      >
         <div className="border-t border-[var(--border)]" />
         <SectionHeader
           eyebrow="Professional References"
           title="Ten Filipino masters that frame the exhibit"
-          description="These works remain available at the bottom of the page so the student showcase stays primary while the professional collection provides a reference point for comparison and discussion."
+          description="These professional works remain available as reference points for comparison, context, and broader discussion within the exhibition."
         />
         <GalleryGrid artworks={professionalArtworks} />
       </section>

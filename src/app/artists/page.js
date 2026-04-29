@@ -32,6 +32,19 @@ const collectionStats = [
   },
 ];
 
+const artistJumps = [
+  {
+    href: "#student-artists",
+    label: "Student Artists",
+    detail: `${studentArtists.length} profiles`,
+  },
+  {
+    href: "#professional-artists",
+    label: "Professional Artists",
+    detail: `${artists.length} profiles`,
+  },
+];
+
 export default function ArtistsPage() {
   return (
     <div className="mx-auto w-full max-w-7xl space-y-10 px-4 py-8 sm:px-6 md:px-8 md:py-16">
@@ -40,7 +53,7 @@ export default function ArtistsPage() {
           <SectionHeader
             eyebrow="Artists"
             title="Student artists first, Filipino masters below"
-            description="This page shows the student artists at the top so viewers can connect each gallery artwork to its creator, then continues with the professional artists that inform the exhibit."
+            description="This page introduces the student artists first, then continues with professional artists whose works deepen the exhibition's context."
           />
 
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -70,21 +83,53 @@ export default function ArtistsPage() {
         </div>
       </section>
 
-      <section className="space-y-6">
+      <section className="rounded-[32px] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[0_8px_24px_var(--ink-shadow)] sm:p-5 md:p-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-1">
+            <p className="text-xs tracking-[0.26em] text-[var(--gold)] uppercase">
+              Quick Navigation
+            </p>
+            <p className="text-sm leading-relaxed text-[var(--muted)]">
+              Jump directly to student or professional artist profiles.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {artistJumps.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] px-4 py-3 transition-colors hover:bg-[var(--hover)]"
+              >
+                <p className="text-sm font-medium text-[var(--foreground)]">
+                  {item.label}
+                </p>
+                <p className="mt-1 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
+                  {item.detail}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="student-artists" className="scroll-mt-28 space-y-6">
         <SectionHeader
           eyebrow="Student Artists"
           title="Creators behind the student showcase"
-          description="Select an artist name in the gallery to jump directly to the matching profile here."
+          description="These profiles identify the student artists featured in the gallery and summarize the perspectives each one contributes to the exhibition."
         />
         <ArtistGrid artists={studentArtists} compact />
       </section>
 
-      <section className="space-y-6 pt-2 md:pt-4">
+      <section
+        id="professional-artists"
+        className="scroll-mt-28 space-y-6 pt-2 md:pt-4"
+      >
         <div className="border-t border-[var(--border)]" />
         <SectionHeader
           eyebrow="Professional Artists"
           title="Reference artists that ground the exhibit"
-          description="These artists remain available below for comparison, discussion, and the broader art appreciation context of the course."
+          description="These professional artists provide the broader historical and formal context that informs the exhibition's themes and comparisons."
         />
         <ArtistGrid artists={artists} />
       </section>

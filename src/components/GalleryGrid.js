@@ -13,8 +13,11 @@ export default function GalleryGrid({ artworks }) {
   return (
     <div className="space-y-12">
       {Object.entries(sections).map(([category, items]) => (
-        <section key={category} className="space-y-5">
-          <div className="flex flex-wrap items-end justify-between gap-3">
+        <section
+          key={category}
+          className="space-y-5 rounded-[30px] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[0_8px_24px_var(--ink-shadow)] sm:p-5 md:p-6"
+        >
+          <div className="flex flex-wrap items-end justify-between gap-3 border-b border-[var(--border)] pb-4">
             <div className="space-y-1">
               <p className="text-xs tracking-[0.28em] text-[var(--gold)] uppercase">
                 Collection Group

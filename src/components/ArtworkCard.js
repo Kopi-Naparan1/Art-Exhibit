@@ -69,7 +69,7 @@ export default function ArtworkCard({ artwork }) {
             View
           </button>
 
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(60,45,34,0.2)] via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(24,49,31,0.24)] via-transparent to-transparent" />
         </div>
 
         <div className="space-y-4 p-5 sm:p-6 md:p-7">
@@ -117,14 +117,13 @@ export default function ArtworkCard({ artwork }) {
           <details className="group">
             <summary className="cursor-pointer list-none text-sm font-medium text-[var(--forest)]">
               <span className="border-b border-transparent pb-0.5 transition-colors group-open:border-[var(--forest)]">
-                Read more
+                Curatorial note
               </span>
             </summary>
 
             <div className="mt-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 text-sm leading-relaxed text-[var(--muted)]">
-              Presented as part of the student artwork showcase, this piece is
-              displayed with a gallery-style preview for classroom review and
-              presentation.
+              Presented within the exhibition sequence as part of a broader
+              study of nature, memory, labor, and place in Filipino art.
             </div>
           </details>
         </div>
@@ -137,7 +136,7 @@ export default function ArtworkCard({ artwork }) {
         >
           <div
             onClick={(event) => event.stopPropagation()}
-            className="relative w-full max-w-5xl overflow-hidden rounded-[32px] border border-[var(--frame-border)] bg-[var(--paper-strong)] shadow-[0_24px_80px_rgba(24,16,10,0.35)]"
+            className="relative w-full max-w-5xl overflow-hidden rounded-[32px] border border-[var(--frame-border)] bg-[var(--paper-strong)] shadow-[0_24px_80px_var(--ink-shadow-strong)]"
             role="dialog"
             aria-modal="true"
             aria-label={`${artwork.title} preview`}

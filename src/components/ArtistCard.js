@@ -5,7 +5,7 @@ export default function ArtistCard({ artist, compact = false }) {
     return (
       <article
         id={artist.slug}
-        className="scroll-mt-28 flex h-full flex-col overflow-hidden rounded-[28px] border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_24px_rgba(43,43,43,0.04)]"
+        className="scroll-mt-28 flex h-full flex-col overflow-hidden rounded-[28px] border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_24px_var(--ink-shadow)]"
       >
         <div className="relative aspect-[4/3] bg-[var(--surface-alt)]">
           <Image
@@ -17,12 +17,20 @@ export default function ArtistCard({ artist, compact = false }) {
           />
         </div>
         <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
-          <h3 className="font-display text-2xl text-[var(--foreground)]">
-            {artist.name}
-          </h3>
-          <p className="text-sm text-[var(--gold)]">{artist.style}</p>
-          <p className="text-base leading-relaxed text-[var(--muted)]">
+          <div className="space-y-2">
+            <p className="inline-flex items-center rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-2.5 py-1 text-[10px] tracking-[0.2em] text-[var(--gold)] uppercase">
+              Featured Artist
+            </p>
+            <h3 className="font-display text-2xl text-[var(--foreground)]">
+              {artist.name}
+            </h3>
+            <p className="text-sm text-[var(--gold)]">{artist.style}</p>
+          </div>
+          <p className="hidden text-base leading-relaxed text-[var(--muted)] sm:block">
             {artist.bio}
+          </p>
+          <p className="text-sm leading-relaxed text-[var(--muted)] sm:hidden">
+            {artist.contribution}
           </p>
         </div>
       </article>
@@ -32,7 +40,7 @@ export default function ArtistCard({ artist, compact = false }) {
   return (
     <article
       id={artist.slug}
-      className="scroll-mt-28 grid gap-0 overflow-hidden rounded-[28px] border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_24px_rgba(43,43,43,0.04)] md:grid-cols-[240px_1fr]"
+      className="scroll-mt-28 grid gap-0 overflow-hidden rounded-[28px] border border-[var(--border)] bg-[var(--surface)] shadow-[0_8px_24px_var(--ink-shadow)] md:grid-cols-[240px_1fr]"
     >
       <div className="relative aspect-[4/4.8] bg-[var(--surface-alt)] md:min-h-[260px]">
         <Image

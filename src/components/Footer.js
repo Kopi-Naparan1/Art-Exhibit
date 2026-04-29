@@ -60,11 +60,11 @@ export default function Footer() {
                 href={developerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-4 py-1.5 text-[12.5px] font-medium text-[#fff7ea] transition-all duration-200 hover:-translate-y-px hover:bg-[var(--accent-strong)] hover:shadow-md active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-4 py-1.5 text-[12.5px] font-medium text-[var(--on-accent)] transition-all duration-200 hover:-translate-y-px hover:bg-[var(--accent-strong)] hover:shadow-md active:scale-95"
                 aria-label="Message @nyro_k1 on Instagram"
               >
                 @nyro_k1
-                <span className="text-[#fff0da] transition-transform duration-200 group-hover:translate-x-0.5">
+                <span className="text-[var(--on-accent-muted)] transition-transform duration-200 group-hover:translate-x-0.5">
                   &gt;
                 </span>
               </a>

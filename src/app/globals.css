@@ -1,28 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #efe2cc;
-  --foreground: #3c2d22;
-  --muted: #6f5b49;
-  --surface: #f7eddc;
-  --surface-alt: #e8d7bc;
-  --border: #c8b393;
-  --forest: #5f6a43;
-  --sage: #8b8d65;
-  --gold: #aa7b3d;
-  --hover: #e1cfb2;
-  --paper: rgba(250, 242, 228, 0.88);
-  --paper-strong: rgba(247, 236, 219, 0.96);
-  --paper-soft: rgba(236, 220, 193, 0.82);
-  --paper-deep: rgba(227, 207, 171, 0.74);
-  --accent-soft: rgba(170, 123, 61, 0.14);
-  --accent-border: rgba(170, 123, 61, 0.34);
-  --accent-strong: #b78849;
-  --frame: rgba(255, 248, 237, 0.7);
-  --frame-border: rgba(255, 248, 237, 0.84);
-  --ink-shadow: rgba(50, 36, 25, 0.1);
-  --ink-shadow-strong: rgba(50, 36, 25, 0.16);
-  --overlay: rgba(30, 21, 13, 0.76);
+  --background: #dfead9;
+  --foreground: #1f3426;
+  --muted: #4f6656;
+  --surface: #edf4e8;
+  --surface-alt: #d5e2cb;
+  --border: #aebfa7;
+  --forest: #24452d;
+  --sage: #6f8a66;
+  --gold: #55753e;
+  --hover: #c8d9bf;
+  --paper: rgba(239, 246, 234, 0.9);
+  --paper-strong: rgba(232, 241, 227, 0.97);
+  --paper-soft: rgba(216, 229, 208, 0.86);
+  --paper-deep: rgba(186, 206, 174, 0.8);
+  --accent-soft: rgba(85, 117, 62, 0.16);
+  --accent-border: rgba(85, 117, 62, 0.36);
+  --accent-strong: #3f5c2d;
+  --frame: rgba(248, 251, 244, 0.76);
+  --frame-border: rgba(248, 251, 244, 0.88);
+  --ink-shadow: rgba(26, 46, 31, 0.14);
+  --ink-shadow-strong: rgba(26, 46, 31, 0.22);
+  --overlay: rgba(14, 25, 17, 0.8);
+  --on-accent: #f4faef;
+  --on-accent-muted: #e6f1dd;
 }
 
 html {
@@ -32,9 +34,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(170, 123, 61, 0.14), transparent 30%),
-    radial-gradient(circle at top right, rgba(95, 106, 67, 0.12), transparent 32%),
-    linear-gradient(180deg, #efe2cc 0%, #e4d0ae 100%);
+    radial-gradient(circle at top left, rgba(122, 160, 97, 0.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(36, 69, 45, 0.14), transparent 34%),
+    linear-gradient(180deg, #dfead9 0%, #c8d8c0 100%);
   color: var(--foreground);
   font-family: var(--font-inter), "Segoe UI", Arial, sans-serif;
 }
@@ -56,7 +58,7 @@ h4 {
 
 ::selection {
   background: var(--gold);
-  color: #fffdf7;
+  color: var(--on-accent);
 }
 
 a {

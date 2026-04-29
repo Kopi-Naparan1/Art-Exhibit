@@ -12,7 +12,7 @@ export default function AboutPage() {
       />
 
       <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-[30px] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_8px_24px_rgba(43,43,43,0.04)] md:p-8">
+        <article className="rounded-[30px] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_8px_24px_var(--ink-shadow)] md:p-8">
           <p className="text-xs tracking-[0.3em] text-[var(--gold)] uppercase">
             Why This Theme?
           </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
           </p>
         </article>
 
-        <article className="rounded-[30px] border border-[var(--border)] bg-[var(--surface-alt)] p-6 shadow-[0_8px_24px_rgba(43,43,43,0.04)] md:p-8">
+        <article className="rounded-[30px] border border-[var(--border)] bg-[var(--surface-alt)] p-6 shadow-[0_8px_24px_var(--ink-shadow)] md:p-8">
           <p className="text-xs tracking-[0.3em] text-[var(--gold)] uppercase">
             Exhibition Concept
           </p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="rounded-[34px] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_8px_24px_rgba(43,43,43,0.04)] md:p-8">
+      <section className="rounded-[34px] border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_8px_24px_var(--ink-shadow)] md:p-8">
         <p className="text-xs tracking-[0.3em] text-[var(--gold)] uppercase">
           Curator&apos;s Note
         </p>
