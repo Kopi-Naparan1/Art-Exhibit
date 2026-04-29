@@ -127,10 +127,10 @@ export default function Home() {
           <div className="grid gap-4 md:content-between">
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] p-4">
-                <p className="text-[10px] tracking-[0.22em] text-[var(--gold)] uppercase">
+                <p className="text-center md:text-left text-[10px] tracking-[0.22em] text-[var(--gold)] uppercase">
                   Best For
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--foreground)]">
+                <p className="text-center md:text-left mt-2 text-sm leading-relaxed text-[var(--foreground)]">
                   Browsing works by theme and medium
                 </p>
               </div>
