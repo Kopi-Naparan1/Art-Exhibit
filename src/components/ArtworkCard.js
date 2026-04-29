@@ -31,6 +31,8 @@ export default function ArtworkCard({ artwork }) {
 
   const category = artwork.category || artwork.medium || "Artwork";
   const yearLabel = artwork.year || "Undated";
+  const mediumLabel =
+    artwork.medium && artwork.medium !== category ? artwork.medium : null;
   const artistName = artwork.artistSlug ? (
     <Link
       href={`/artists#${artwork.artistSlug}`}
@@ -132,11 +134,11 @@ export default function ArtworkCard({ artwork }) {
       {isOpen ? (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--overlay)] px-4 py-6 backdrop-blur-sm"
+          className="fixed inset-0 z-50 overflow-y-auto bg-[var(--overlay)] px-3 py-4 backdrop-blur-sm sm:px-4 sm:py-5"
         >
           <div
             onClick={(event) => event.stopPropagation()}
-            className="relative w-full max-w-5xl overflow-hidden rounded-[32px] border border-[var(--frame-border)] bg-[var(--paper-strong)] shadow-[0_24px_80px_var(--ink-shadow-strong)]"
+            className="relative mx-auto my-auto w-full max-w-3xl overflow-hidden rounded-[28px] border border-[var(--frame-border)] bg-[var(--paper-strong)] shadow-[0_18px_56px_var(--ink-shadow-strong)] max-sm:max-h-[calc(100vh-2rem)] max-sm:overflow-y-auto"
             role="dialog"
             aria-modal="true"
             aria-label={`${artwork.title} preview`}
@@ -144,39 +146,41 @@ export default function ArtworkCard({ artwork }) {
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="absolute right-4 top-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--paper-strong)] text-[var(--foreground)] shadow-md transition hover:-translate-y-0.5 hover:bg-[var(--surface)]"
+              className="absolute right-3 top-3 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--paper-strong)] text-[var(--foreground)] shadow-md transition hover:-translate-y-0.5 hover:bg-[var(--surface)] sm:right-4 sm:top-4 sm:h-11 sm:w-11"
               aria-label="Close preview"
             >
               <X size={18} />
             </button>
 
-            <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="relative bg-[linear-gradient(180deg,var(--paper-deep)_0%,var(--paper-strong)_100%)] p-5 sm:p-6 lg:p-8">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-[var(--frame-border)] bg-[var(--frame)] shadow-[0_16px_40px_var(--ink-shadow-strong)]">
+            <div className="grid gap-0 xl:grid-cols-[0.96fr_0.84fr]">
+              <div className="relative bg-[linear-gradient(180deg,var(--paper-deep)_0%,var(--paper-strong)_100%)] p-3 sm:p-4 md:p-5">
+                <div className="relative mx-auto aspect-[4/4.6] max-w-[320px] overflow-hidden rounded-[24px] border border-[var(--frame-border)] bg-[var(--frame)] shadow-[0_12px_28px_var(--ink-shadow-strong)] sm:max-w-[340px] md:max-w-[360px]">
                   <Image
                     src={artwork.image}
                     alt={artwork.title}
                     fill
-                    className="object-contain p-3"
-                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    className="object-contain p-3 sm:p-4"
+                    sizes="(min-width: 1280px) 45vw, 100vw"
                     priority
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between gap-6 p-5 sm:p-6 lg:p-8">
-                <div className="space-y-5">
+              <div className="flex flex-col justify-between gap-4 p-4 pt-4 sm:p-5 xl:p-6">
+                <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
                     <span className="inline-flex items-center rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-3 py-1 text-[11px] tracking-[0.22em] text-[var(--gold)] uppercase">
                       {category}
                     </span>
-                    <span className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--surface-alt)] px-3 py-1 text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
-                      {artwork.medium}
-                    </span>
+                    {mediumLabel ? (
+                      <span className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--surface-alt)] px-3 py-1 text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
+                        {mediumLabel}
+                      </span>
+                    ) : null}
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="font-display text-3xl font-semibold tracking-tight text-[var(--foreground)]">
+                    <h3 className="pr-10 font-display text-xl font-semibold tracking-tight text-[var(--foreground)] sm:text-2xl">
                       {artwork.title}
                     </h3>
                     <p className="text-sm tracking-[0.18em] text-[var(--muted)] uppercase">
@@ -184,12 +188,12 @@ export default function ArtworkCard({ artwork }) {
                     </p>
                   </div>
 
-                  <p className="text-base leading-relaxed text-[var(--foreground)]">
+                  <p className="text-sm leading-relaxed text-[var(--foreground)] sm:text-base">
                     {artwork.description}
                   </p>
                 </div>
 
-                <div className="grid gap-3 rounded-[24px] border border-[var(--border)] bg-[var(--surface)] p-4 text-sm text-[var(--muted)] sm:grid-cols-3">
+                <div className="grid gap-3 rounded-[22px] border border-[var(--border)] bg-[var(--surface)] p-4 text-sm text-[var(--muted)] sm:grid-cols-2 xl:grid-cols-3">
                   <div>
                     <p className="text-[11px] tracking-[0.18em] uppercase text-[var(--gold)]">
                       Category
@@ -200,7 +204,9 @@ export default function ArtworkCard({ artwork }) {
                     <p className="text-[11px] tracking-[0.18em] uppercase text-[var(--gold)]">
                       Medium
                     </p>
-                    <p className="mt-1 text-[var(--foreground)]">{artwork.medium}</p>
+                    <p className="mt-1 text-[var(--foreground)]">
+                      {artwork.medium || category}
+                    </p>
                   </div>
                   <div>
                     <p className="text-[11px] tracking-[0.18em] uppercase text-[var(--gold)]">

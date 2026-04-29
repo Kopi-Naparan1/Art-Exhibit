@@ -143,7 +143,8 @@ export default function Home() {
             <div className="flex items-center md:justify-end">
               <Link
                 href="/gallery"
-                className="inline-flex w-full items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[var(--on-accent)] transition-colors hover:bg-[var(--accent-strong)] sm:w-auto"
+                style={{ color: "#fffdf7" }}
+                className="inline-flex w-full items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[#fffdf7] transition-colors hover:bg-[var(--accent-strong)] hover:text-[#fffdf7] sm:w-auto"
               >
                 Explore Gallery
               </Link>

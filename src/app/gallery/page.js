@@ -3,6 +3,7 @@ import studentArtworks from "@/data/student-artworks";
 import professionalArtworks from "@/data/artworks";
 import SectionHeader from "@/components/SectionHeader";
 import GalleryGrid from "@/components/GalleryGrid";
+import SectionJumpLinks from "@/components/SectionJumpLinks";
 
 export const metadata = {
   title: "Student Art Showcase + Filipino Masters",
@@ -108,26 +109,11 @@ export default function GalleryPage() {
               Move directly to the student or professional section.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {galleryJumps.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] px-4 py-3 transition-colors hover:bg-[var(--hover)]"
-              >
-                <p className="text-sm font-medium text-[var(--foreground)]">
-                  {item.label}
-                </p>
-                <p className="mt-1 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
-                  {item.detail}
-                </p>
-              </a>
-            ))}
-          </div>
+          <SectionJumpLinks items={galleryJumps} />
         </div>
       </section>
 
-      <section id="student-artworks" className="scroll-mt-28 space-y-6">
+      <section id="student-artworks" className="scroll-mt-36 space-y-6">
         <SectionHeader
           eyebrow="Student Artworks"
           title="The student collection"
@@ -138,7 +124,7 @@ export default function GalleryPage() {
 
       <section
         id="professional-artworks"
-        className="scroll-mt-28 space-y-6 pt-2 md:pt-4"
+        className="scroll-mt-36 space-y-6 pt-2 md:pt-4"
       >
         <div className="border-t border-[var(--border)]" />
         <SectionHeader

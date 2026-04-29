@@ -4,6 +4,7 @@ import studentArtists from "@/data/student-artists";
 import studentArtworks from "@/data/student-artworks";
 import SectionHeader from "@/components/SectionHeader";
 import ArtistGrid from "@/components/ArtistGrid";
+import SectionJumpLinks from "@/components/SectionJumpLinks";
 
 const collectionStats = [
   {
@@ -93,26 +94,11 @@ export default function ArtistsPage() {
               Jump directly to student or professional artist profiles.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {artistJumps.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-[22px] border border-[var(--border)] bg-[var(--paper-strong)] px-4 py-3 transition-colors hover:bg-[var(--hover)]"
-              >
-                <p className="text-sm font-medium text-[var(--foreground)]">
-                  {item.label}
-                </p>
-                <p className="mt-1 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
-                  {item.detail}
-                </p>
-              </a>
-            ))}
-          </div>
+          <SectionJumpLinks items={artistJumps} />
         </div>
       </section>
 
-      <section id="student-artists" className="scroll-mt-28 space-y-6">
+      <section id="student-artists" className="scroll-mt-36 space-y-6">
         <SectionHeader
           eyebrow="Student Artists"
           title="Creators behind the student showcase"
@@ -123,7 +109,7 @@ export default function ArtistsPage() {
 
       <section
         id="professional-artists"
-        className="scroll-mt-28 space-y-6 pt-2 md:pt-4"
+        className="scroll-mt-36 space-y-6 pt-2 md:pt-4"
       >
         <div className="border-t border-[var(--border)]" />
         <SectionHeader

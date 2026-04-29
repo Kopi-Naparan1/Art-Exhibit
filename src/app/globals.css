@@ -23,8 +23,8 @@
   --ink-shadow: rgba(26, 46, 31, 0.14);
   --ink-shadow-strong: rgba(26, 46, 31, 0.22);
   --overlay: rgba(14, 25, 17, 0.8);
-  --on-accent: #f4faef;
-  --on-accent-muted: #e6f1dd;
+  --on-accent: #f7f1de;
+  --on-accent-muted: #eadfc0;
 }
 
 html {

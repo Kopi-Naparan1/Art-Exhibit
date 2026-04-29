@@ -3,7 +3,7 @@ import VerulaProfile from "@/app/assets/student-artist-pic/verula.jpg";
 import EchavezProfile from "@/app/assets/student-artist-pic/echaves.jpg";
 import BardagoProfile from "@/app/assets/student-artist-pic/bardago.jpg";
 import FontanosProfile from "@/app/assets/student-artist-pic/fontanos.jpg";
-import BejecProfile from "@/app/assets/student-artist-pic/bejec.png";
+import BejecProfile from "@/app/assets/student-artist-pic/bejec.jpg";
 import MejaresProfile from "@/app/assets/student-artist-pic/mejares.jpg";
 import LaureProfile from "@/app/assets/student-artist-pic/laure.jpg";
 import CastilProfile from "@/app/assets/student-artist-pic/castil.jpg";

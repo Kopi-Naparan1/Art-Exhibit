@@ -60,7 +60,8 @@ export default function Footer() {
                 href={developerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-4 py-1.5 text-[12.5px] font-medium text-[var(--on-accent)] transition-all duration-200 hover:-translate-y-px hover:bg-[var(--accent-strong)] hover:shadow-md active:scale-95"
+                style={{ color: "#fffdf7" }}
+                className="group inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-4 py-1.5 text-[12.5px] font-medium text-[#fffdf7] transition-all duration-200 hover:-translate-y-px hover:bg-[var(--accent-strong)] hover:text-[#fffdf7] hover:shadow-md active:scale-95"
                 aria-label="Message @nyro_k1 on Instagram"
               >
                 @nyro_k1

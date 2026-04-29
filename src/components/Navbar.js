@@ -11,7 +11,10 @@ const navItems = [
     label: "Gallery",
     children: [
       { href: "/gallery#student-artworks", label: "Student Artworks" },
-      { href: "/gallery#professional-artworks", label: "Professional Artworks" },
+      {
+        href: "/gallery#professional-artworks",
+        label: "Professional Artworks",
+      },
     ],
   },
   {
@@ -47,12 +50,15 @@ export default function Navbar() {
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:px-8 md:py-4">
         <Link href="/" className="flex flex-col gap-0.5">
-          <span className="font-display text-base tracking-[0.16em] text-[var(--forest)] uppercase sm:text-lg sm:tracking-[0.18em]">
-            Nature in Filipino Art
-          </span>
-          <span className="text-[10px] tracking-[0.24em] text-[var(--muted)] uppercase sm:text-xs sm:tracking-[0.28em]">
-            Virtual Gallery Exhibit
-          </span>
+          <div className="flex flex-col border-l-2 border-[var(--gold)] pl-3 leading-tight">
+            <span className="font-display text-lg sm:text-xl uppercase tracking-[0.06em] text-[var(--forest)]">
+              Kalikas
+            </span>
+
+            <span className="mt-1 text-[10px] sm:text-xs uppercase tracking-[0.28em] text-[var(--muted)]">
+              Virtual Gallery Exhibit
+            </span>
+          </div>
         </Link>
 
         <button
@@ -105,11 +111,15 @@ export default function Navbar() {
                   ].join(" ")}
                 >
                   {item.label}
-                  <span className="text-[10px] leading-none text-current">+</span>
+                  <span className="text-[10px] leading-none text-current">
+                    +
+                  </span>
                   <span
                     className={[
                       "absolute -bottom-1 left-0 h-px w-full origin-left bg-[var(--forest)] transition-transform",
-                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+                      active
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100",
                     ].join(" ")}
                   />
                 </Link>
@@ -191,7 +201,7 @@ export default function Navbar() {
                     className="rounded-2xl px-3 py-3 text-sm text-[var(--forest)] transition-colors hover:bg-[var(--hover)]"
                     onClick={() =>
                       setOpenMobileSection((value) =>
-                        value === item.href ? null : item.href
+                        value === item.href ? null : item.href,
                       )
                     }
                   >

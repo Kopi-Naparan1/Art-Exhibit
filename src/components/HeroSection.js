@@ -1,25 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import marketVendors from "@/app/assets/arts/market-vendors.avif";
-import plantingRice from "@/app/assets/arts/planting-rice.avif";
-import spiritOfTheForest from "@/app/assets/arts/spirit-of-the-forest.avif";
+import bardagoTree from "@/app/assets/our-arts/bardago-tree.avif";
+import naparanCoffee from "@/app/assets/our-arts/naparan-coffee.avif";
+import echavezMountain from "@/app/assets/our-arts/echaves-mountain.avif";
 
 const heroArtworks = [
   {
-    title: "Market Vendors",
-    detail: "Harvest, labor, and everyday movement",
-    image: marketVendors,
+    title: "Tree",
+    detail: "Cubist structure, layered greens, and abstracted natural form",
+    image: bardagoTree,
     priority: true,
   },
   {
-    title: "Planting Rice",
-    detail: "Pastoral rhythm and cultivated land",
-    image: plantingRice,
+    title: "Nature Coffee Painting",
+    detail: "Coffee tones, quiet atmosphere, and organic texture",
+    image: naparanCoffee,
   },
   {
-    title: "Spirit of the Forest",
-    detail: "Folklore, guardianship, and woodland myth",
-    image: spiritOfTheForest,
+    title: "Mountain",
+    detail: "Pencil shading, distance, and a calm mountain landscape",
+    image: echavezMountain,
   },
 ];
 
@@ -52,7 +52,8 @@ export default function HeroSection({
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Link
               href={ctaHref}
-              className="inline-flex w-full items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[var(--on-accent)] transition-colors hover:bg-[var(--accent-strong)] sm:w-auto"
+              style={{ color: "#fffdf7" }}
+              className="inline-flex w-full items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[#fffdf7] transition-colors hover:bg-[var(--accent-strong)] hover:text-[#fffdf7] sm:w-auto"
             >
               {ctaLabel}
             </Link>

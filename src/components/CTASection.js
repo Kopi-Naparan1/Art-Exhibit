@@ -19,7 +19,8 @@ export default function CTASection({ title, description, href, label }) {
         <div className="mt-8">
           <Link
             href={href}
-            className="inline-flex items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[var(--on-accent)] transition-colors hover:bg-[var(--accent-strong)]"
+            style={{ color: "#fffdf7" }}
+            className="inline-flex items-center justify-center rounded-full border border-[var(--accent-border)] bg-[var(--gold)] px-6 py-3 text-sm font-medium text-[#fffdf7] transition-colors hover:bg-[var(--accent-strong)] hover:text-[#fffdf7]"
           >
             {label}
           </Link>
