@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { BrushCleaning, Leaf, Mountain, Sparkles } from "lucide-react";
-import { artists, exhibitionConcept } from "@/data/artworks";
+import { exhibitionConcept } from "@/data/artworks";
+import studentArtists from "@/data/student-artists";
 import HeroSection from "@/components/HeroSection";
 import SectionHeader from "@/components/SectionHeader";
 import ArtistGrid from "@/components/ArtistGrid";
 
-const featuredArtists = artists.slice(0, 4);
+const featuredStudentArtists = studentArtists.slice(0, 4);
 const overviewHighlights = [
   {
     label: "Core Theme",
@@ -73,36 +74,36 @@ export default function Home() {
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="mb-6 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
           <SectionHeader
-            eyebrow="Featured Artists"
-            title="Four artists central to the exhibition"
-            description="A concise introduction to the artists whose works shape the exhibition's visual and thematic direction."
+            eyebrow="Student Artists"
+            title="A preview of the student artists"
+            description="An introduction to the students behind the exhibition, giving viewers a quick way to meet the makers before entering the full gallery."
           />
           <Link
             href="/artists"
             className="hidden rounded-full border border-[var(--accent-border)] px-4 py-2 text-sm text-[var(--gold)] transition-colors hover:bg-[var(--accent-soft)] md:inline-flex"
           >
-            View All Artists
+            View Student Artists
           </Link>
         </div>
         <div className="rounded-[34px] border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[0_8px_24px_var(--ink-shadow)] sm:p-5 md:p-6">
           <div className="mb-4 flex items-center justify-between gap-3 border-b border-[var(--border)] pb-4 sm:mb-5">
             <p className="text-sm leading-relaxed text-[var(--muted)]">
-              Selected profiles provide a quick point of entry before the full
-              artist directory.
+              Selected student profiles offer a quick entry point before the
+              full artist directory.
             </p>
             <div className="hidden items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-3 py-1 text-[11px] tracking-[0.18em] text-[var(--gold)] uppercase lg:inline-flex">
               <Sparkles size={14} />
-              Selected Profiles
+              Student Preview
             </div>
           </div>
-          <ArtistGrid artists={featuredArtists} compact />
+          <ArtistGrid artists={featuredStudentArtists} compact />
         </div>
         <div className="mt-6 md:hidden">
           <Link
             href="/artists"
             className="inline-flex w-full items-center justify-center rounded-full border border-[var(--accent-border)] px-4 py-3 text-sm text-[var(--gold)] transition-colors hover:bg-[var(--accent-soft)]"
           >
-            View All Artists
+            View Student Artists
           </Link>
         </div>
       </section>
