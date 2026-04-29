@@ -36,6 +36,8 @@ const artworks = [
     artistImage: GaloOcampo,
     description:
       "A modernist retelling of the Filipino creation myth, where humanity rises from bamboo and the natural world becomes the first source of identity, origin, and belonging.",
+    insight:
+      "The split bamboo figure and warm ground tones turn the myth into a grounded meditation on origin and belonging.",
   },
   {
     id: 2,
@@ -48,6 +50,8 @@ const artworks = [
     artistImage: RomeoBallada,
     description:
       "A lyrical courtship scene set on water, where lilies, shoreline greens, and still reflections create a quiet atmosphere shaped by nature and tradition.",
+    insight:
+      "The still water and surrounding greenery soften the scene, giving the courtship moment a calm, intimate mood.",
   },
   {
     id: 3,
@@ -60,6 +64,8 @@ const artworks = [
     artistImage: DanteHipolito,
     description:
       "A detailed rural image of collective labor and abundance, celebrating the generosity of Philippine farmland and the shared rhythm of harvest season.",
+    insight:
+      "The dense movement of figures and grain gives the scene its sense of shared labor and seasonal abundance.",
   },
   {
     id: 4,
@@ -72,6 +78,8 @@ const artworks = [
     artistImage: RodelTapaya,
     description:
       "A contemporary folklore-inflected work that frames the forest as a living spiritual landscape, full of guardianship, memory, and myth.",
+    insight:
+      "Mythic forms and layered foliage make the forest feel alive, guarded, and symbolic rather than merely scenic.",
   },
   {
     id: 5,
@@ -84,6 +92,8 @@ const artworks = [
     artistImage: MarianoMadarang,
     description:
       "An image of the mountain guardian surrounded by flora and wildlife, presenting the forest as a sanctuary shaped by protection, generosity, and legend.",
+    insight:
+      "The surrounding plants and animals frame the guardian as part of the landscape, not separate from it.",
   },
   {
     id: 6,
@@ -96,6 +106,8 @@ const artworks = [
     artistImage: VicenteManansala,
     description:
       "An expressive study of a weathered tree that emphasizes endurance, age, and the quiet authority of nature as witness to changing time.",
+    insight:
+      "The tree's worn texture and upright form give the piece a quiet sense of endurance and memory.",
   },
   {
     id: 7,
@@ -108,6 +120,8 @@ const artworks = [
     artistImage: CarlosFrancisco,
     description:
       "A festive rural scene beneath tropical trees, showing how natural spaces become gathering grounds for music, dance, and community life.",
+    insight:
+      "The bright crowd and canopy of trees turn the village celebration into a communal scene shaped by place.",
   },
   {
     id: 8,
@@ -120,6 +134,8 @@ const artworks = [
     artistImage: FernandoAmorsolo,
     description:
       "An iconic pastoral scene of farmers at work under radiant light, presenting cultivation as dignity, warmth, and harmony with the land.",
+    insight:
+      "The open field and glowing light frame farm work as a calm, dignified part of everyday life.",
   },
   {
     id: 9,
@@ -132,6 +148,8 @@ const artworks = [
     artistImage: AnitaMagsaysay,
     description:
       "A modernist rendering of women working together, where agricultural labor becomes a study in rhythm, movement, and collective strength.",
+    insight:
+      "The repeated gestures and unified composition make teamwork the center of the image.",
   },
   {
     id: 10,
@@ -144,6 +162,8 @@ const artworks = [
     artistImage: BenedictoCabrera,
     description:
       "A powerful portrait of a figure carrying harvest produce, linking Filipino labor, abundance, and the physical weight of the land's gifts.",
+    insight:
+      "The burden of the harvest is carried directly in the composition, giving the piece its sense of labor and weight.",
   },
 ];
 const artists = [

@@ -33,6 +33,9 @@ export default function ArtworkCard({ artwork }) {
   const yearLabel = artwork.year || "Undated";
   const mediumLabel =
     artwork.medium && artwork.medium !== category ? artwork.medium : null;
+  const insight =
+    artwork.insight ||
+    `A brief view into ${artwork.title}, showing how its form, medium, and subject work together.`;
   const artistName = artwork.artistSlug ? (
     <Link
       href={`/artists#${artwork.artistSlug}`}
@@ -112,20 +115,15 @@ export default function ArtworkCard({ artwork }) {
             </div>
           </div>
 
-          <p className="text-base leading-relaxed text-[var(--foreground)]">
-            {artwork.description}
-          </p>
-
           <details className="group">
             <summary className="cursor-pointer list-none text-sm font-medium text-[var(--forest)]">
               <span className="border-b border-transparent pb-0.5 transition-colors group-open:border-[var(--forest)]">
-                Curatorial note
+                Artwork insight
               </span>
             </summary>
 
             <div className="mt-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-alt)] p-4 text-sm leading-relaxed text-[var(--muted)]">
-              Presented within the exhibition sequence as part of a broader
-              study of nature, memory, labor, and place in Filipino art.
+              {insight}
             </div>
           </details>
         </div>
