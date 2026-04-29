@@ -38,13 +38,13 @@ export default function HeroSection({
       <div className="grid items-start gap-6 rounded-4xl border border-[var(--border)] bg-[var(--paper)] p-4 shadow-[0_16px_40px_var(--ink-shadow)] sm:gap-8 sm:p-6 lg:grid-cols-[0.96fr_1.04fr] lg:gap-10 lg:p-8 xl:p-10">
         <div className="order-1 space-y-5 self-center lg:space-y-7">
           <div className="space-y-3 sm:space-y-4">
-            <p className="text-xs tracking-[0.3em] text-[var(--gold)] uppercase">
+            <p className="text-xs tracking-[0.3em] text-[var(--gold)] text-center md:text-left uppercase">
               {eyebrow}
             </p>
-            <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-[var(--forest)] sm:text-5xl md:text-6xl xl:text-7xl">
+            <h1 className="font-display text-center md:text-left  text-4xl font-bold leading-tight tracking-tight text-[var(--forest)] sm:text-5xl md:text-6xl xl:text-7xl">
               {title}
             </h1>
-            <p className="hidden md:block max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
+            <p className="hidden md:block text-center md:text-left  max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
               {subtitle}
             </p>
           </div>

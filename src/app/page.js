@@ -30,7 +30,7 @@ export default function Home() {
     <div className="space-y-10 pb-12 md:space-y-14">
       <HeroSection
         eyebrow="Student Showcase"
-        title="Nature in Filipino Art"
+        title="KALIKAS"
         subtitle="A curated exhibition of student works exploring nature through painting, drawing, calligraphy, photography, paper art, and animation."
         ctaLabel="View the Gallery"
       />
@@ -110,13 +110,15 @@ export default function Home() {
 
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="grid gap-6 rounded-[34px] border border-[var(--border)] bg-[linear-gradient(135deg,var(--paper-deep)_0%,var(--surface-alt)_100%)] px-6 py-8 shadow-[0_10px_28px_var(--ink-shadow)] md:grid-cols-[1.05fr_0.95fr] md:px-10 md:py-10">
-          <div className="space-y-4">
-            <p className="inline-flex items-center rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-3 py-1 text-xs tracking-[0.28em] text-[var(--gold)] uppercase">
+          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+            <p className="inline-flex w-fit rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] px-3 py-1 text-xs tracking-[0.28em] text-[var(--gold)] uppercase">
               Full Collection
             </p>
+
             <h2 className="font-display text-3xl font-semibold tracking-tight text-[var(--forest)] md:text-5xl">
               Explore the complete student collection
             </h2>
+
             <p className="max-w-2xl text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg hidden md:block">
               Continue from the homepage into the full gallery, where the works
               are organized for clear viewing and closer study.
